@@ -50,6 +50,10 @@ body {
     }
 
 }
+
+
+
+
 .half-circle-2 {
     /* border: 1px solid red; */
     height: 150px;
@@ -115,3 +119,4 @@ body {
     0% {transform: rotate(-45deg);}
     50% {transform: rotate(135deg);}
 }
+
