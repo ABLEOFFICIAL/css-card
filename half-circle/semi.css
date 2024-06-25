@@ -1,0 +1,117 @@
+:root {
+    --percentage1: 60;
+    --percentage2: 90;
+    --percentage3: 40;
+    --fill: #00acc1;
+    --fill2: rgb(246, 255, 0);
+    --fill3: #ed3f00;
+}
+
+body {
+    max-width: 1100px;
+    margin: auto;
+    font-family: arial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    background-color: rgb(32, 30, 30);
+}
+
+
+/* half-circle */
+.half-circle-1 {
+    /* border: 1px solid red; */
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+    &:after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 50px solid ;
+        width: 300px;
+        height: 300px;
+        border-color: #484747 #484747 var(--fill2) var(--fill2);
+        border-radius: 50%;
+        transform: rotate( calc(1deg * (-45 + var(--percentage1) * 1.8 ) ) );
+
+        animation: fillAnimation 1s ease-in;
+    }
+
+}
+.half-circle-2 {
+    /* border: 1px solid red; */
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+    &:after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 50px solid ;
+        width: 300px;
+        height: 300px;
+        border-color: #484747 #484747 var(--fill3) var(--fill3);
+        border-radius: 50%;
+        transform: rotate( calc(1deg * (-45 + var(--percentage2) * 1.8 ) ) );
+
+        animation: fillAnimation 1s ease-in;
+    }
+
+}
+.half-circle-3 {
+    /* border: 1px solid red; */
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+    &:after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 50px solid ;
+        width: 300px;
+        height: 300px;
+        border-color: #484747 #484747 var(--fill) var(--fill);
+        border-radius: 50%;
+        transform: rotate( calc(1deg * (-45 + var(--percentage3) * 1.8 ) ) );
+
+        animation: fillAnimation 1s ease-in;
+    }
+
+}
+
+@keyframes fillAnimation {
+    0% {transform: rotate(-45deg);}
+    50% {transform: rotate(135deg);}
+}
