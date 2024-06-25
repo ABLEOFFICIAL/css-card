@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+body {
+    font-family: "DM Mono", monospace;
+    background-color: #17141d;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.card-list {
+    display: flex;
+    justify-items: space-between;
+    padding: 3rem;
+}
+
+.card {
+    display: flex;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    position: relative;
+    flex-direction: column;
+    padding: 1.5rem;
+
+    background-color: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.card-author {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 3rem 0 0;
+}
+
+.author-avatar img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    /* filter: grayscale(100%); */
+    display: block;
+    overflow: hidden;
+    margin: 16px 10px;
+}
+
+.half-circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
